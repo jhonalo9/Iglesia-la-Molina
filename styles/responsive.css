@@ -99,3 +99,50 @@
         font-size: 5rem;
     }
 }
+
+
+@media (max-width: 768px) {
+    .hero-with-bg,
+    .hero-parallax,
+    .hero-split-bg {
+        background-attachment: scroll; /* Desactivar parallax en móviles */
+        min-height: 70vh;
+    }
+    
+    .hero-split-bg .hero-bg-image::after {
+        background: linear-gradient(135deg, 
+            rgba(74, 108, 247, 0.95) 0%, 
+            rgba(74, 108, 247, 0.85) 100%);
+    }
+    
+    .hero-with-bg .hero-title,
+    .hero-parallax .hero-title,
+    .hero-split-bg .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-with-bg .hero-subtitle,
+    .hero-parallax .hero-subtitle,
+    .hero-split-bg .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-with-bg,
+    .hero-parallax,
+    .hero-split-bg {
+        min-height: 60vh;
+        text-align: center;
+    }
+    
+    .hero-split-bg .hero-text {
+        margin: 0 auto;
+    }
+    
+    .hero-with-bg .hero-title,
+    .hero-parallax .hero-title,
+    .hero-split-bg .hero-title {
+        font-size: 2rem;
+    }
+}

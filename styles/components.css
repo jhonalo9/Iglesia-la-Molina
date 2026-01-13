@@ -1388,10 +1388,11 @@
 .hero-with-bg {
     background-image: url('../assets/fondo.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     position: relative;
     color: white;
+    min-height: 500px;
 }
 
 
@@ -1401,13 +1402,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(225, 226, 230, 0.19) 0%, rgba(58, 86, 212, 0.9) 100%);
+    background: linear-gradient(135deg, rgb(23 23 23 / 35%) 0%, rgb(29 33 55 / 90%) 100%);
     z-index: 1;
 }
 
 .hero-with-bg .hero-content {
     position: relative;
     z-index: 2;
+}
+.dimens{
+    border: 5px solid #799679;
+
 }
 
 /* Ajustar colores del texto para mejor contraste */
@@ -1416,11 +1421,33 @@
     color: white;
 }
 
+.image-placeholder {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 30px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
 /* Ajustar icono en el placeholder */
 .hero-with-bg .image-placeholder {
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
+
+
 
 .hero-with-bg .image-placeholder i {
     color: white;
