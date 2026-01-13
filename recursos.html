@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - Iglesia Nazarena La Molina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-church"></i>
+                    <span>Iglesia Nazarena<br><small>La Molina</small></span>
+                </a>
+                
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a></li>
+                    <li><a href="actividades.html"><i class="fas fa-calendar-alt"></i> Actividades</a></li>
+                    <li><a href="dni.html"><i class="fas fa-graduation-cap"></i> DNI</a></li>
+                    <li><a href="recursos.html" class="active"><i class="fas fa-book-open"></i> Recursos</a></li>
+                    <li><a href="dar.html"><i class="fas fa-hand-holding-heart"></i> Dar</a></li>
+                    <li><a href="contacto.html" class="btn-nav"><i class="fas fa-phone-alt"></i> Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-page">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Recursos Espirituales</h1>
+                <p class="hero-subtitle">Material para tu crecimiento y desarrollo espiritual</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Podcasts -->
+        <section class="section">
+            <div class="container">
+                <div class="page-header">
+                    <h2><i class="fas fa-podcast"></i> Podcasts y Mensajes</h2>
+                    <div class="divider"></div>
+                    <p class="page-description">Escucha nuestras predicaciones y enseñanzas</p>
+                </div>
+                
+                <div class="podcasts">
+                    <div class="podcast-player">
+                        <div class="player-header">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>Último Mensaje</h3>
+                        </div>
+                        <div class="player-content">
+                            <h4>"La Fe que Mueve Montañas"</h4>
+                            <p class="preacher"><i class="fas fa-user"></i> Rev. Luis Mendoza</p>
+                            <p class="date"><i class="far fa-calendar"></i> Domingo, 10 de Marzo 2024</p>
+                            <p class="description">Un mensaje inspirador sobre el poder de la fe en medio de las dificultades.</p>
+                            
+                            <div class="player-controls">
+                                <button class="play-btn">
+                                    <i class="fas fa-play"></i> Escuchar
+                                </button>
+                                <button class="download-btn">
+                                    <i class="fas fa-download"></i> Descargar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="podcast-list">
+                        <h3><i class="fas fa-list"></i> Mensajes Recientes</h3>
+                        <div class="episode">
+                            <div class="episode-info">
+                                <h4>"Amor Incondicional"</h4>
+                                <p>Dra. Ana Torres | 3 Mar 2024</p>
+                            </div>
+                            <button class="play-episode">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="episode">
+                            <div class="episode-info">
+                                <h4>"Viviendo en Santidad"</h4>
+                                <p>Pastor Roberto Díaz | 24 Feb 2024</p>
+                            </div>
+                            <button class="play-episode">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="episode">
+                            <div class="episode-info">
+                                <h4>"El Poder de la Oración"</h4>
+                                <p>Rev. Luis Mendoza | 17 Feb 2024</p>
+                            </div>
+                            <button class="play-episode">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="text-right">
+                            <a href="#" class="btn btn-small">
+                                <i class="fas fa-list-ul"></i> Ver Todos los Mensajes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biblioteca Digital -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="page-header">
+                    <h2><i class="fas fa-book"></i> Biblioteca Digital</h2>
+                    <div class="divider"></div>
+                    <p class="page-description">Libros y recursos recomendados para tu estudio</p>
+                </div>
+                
+                <div class="library">
+                    <div class="library-filters">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="teologia">Teología</button>
+                        <button class="filter-btn" data-filter="devocional">Devocional</button>
+                        <button class="filter-btn" data-filter="familia">Familia</button>
+                        <button class="filter-btn" data-filter="liderazgo">Liderazgo</button>
+                    </div>
+                    
+                    <div class="books-grid">
+                        <div class="book-card" data-category="teologia">
+                            <div class="book-cover">
+                                <i class="fas fa-book-bible"></i>
+                            </div>
+                            <div class="book-info">
+                                <h4>Doctrinas Fundamentales</h4>
+                                <p class="author">Dr. John Smith</p>
+                                <p class="description">Un estudio completo de las doctrinas esenciales del cristianismo.</p>
+                                <button class="btn btn-small">
+                                    <i class="fas fa-download"></i> Descargar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="book-card" data-category="devocional">
+                            <div class="book-cover">
+                                <i class="fas fa-pray"></i>
+                            </div>
+                            <div class="book-info">
+                                <h4>Devocionales Diarios</h4>
+                                <p class="author">Equipo Pastoral</p>
+                                <p class="description">365 devocionales para cada día del año.</p>
+                                <button class="btn btn-small">
+                                    <i class="fas fa-download"></i> Descargar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="book-card" data-category="familia">
+                            <div class="book-cover">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="book-info">
+                                <h4>Matrimonio Según Dios</h4>
+                                <p class="author">Gary Chapman</p>
+                                <p class="description">Principios bíblicos para un matrimonio sólido.</p>
+                                <button class="btn btn-small">
+                                    <i class="fas fa-download"></i> Descargar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="book-card" data-category="liderazgo">
+                            <div class="book-cover">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="book-info">
+                                <h4>Liderazgo con Propósito</h4>
+                                <p class="author">John Maxwell</p>
+                                <p class="description">Principios de liderazgo desde una perspectiva cristiana.</p>
+                                <button class="btn btn-small">
+                                    <i class="fas fa-download"></i> Descargar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Devocionales -->
+        <section class="section">
+            <div class="container">
+                <div class="page-header">
+                    <h2><i class="fas fa-pray"></i> Devocionales Diarios</h2>
+                    <div class="divider"></div>
+                    <p class="page-description">Alimento espiritual para cada día</p>
+                </div>
+                
+                <div class="devotionals">
+                    <div class="devotional-of-day">
+                        <div class="devotional-header">
+                            <h3><i class="fas fa-calendar-day"></i> Devocional del Día</h3>
+                            <p class="date">Martes, 12 de Marzo 2024</p>
+                        </div>
+                        <div class="devotional-content">
+                            <div class="bible-verse">
+                                <h4><i class="fas fa-book-bible"></i> Versículo del Día</h4>
+                                <p class="verse">"Encomienda a Jehová tu camino, y confía en él; y él hará."</p>
+                                <p class="reference">Salmos 37:5</p>
+                            </div>
+                            <div class="devotional-text">
+                                <h4><i class="fas fa-lightbulb"></i> Reflexión</h4>
+                                <p>Dios nos invita a confiar completamente en Él. Cuando encomendamos nuestro camino al Señor, estamos reconociendo que Él es soberano y que tiene el control de todas las cosas. Hoy, elige confiar en Dios con cada aspecto de tu vida.</p>
+                                <p><strong>Oración:</strong> Señor, hoy te entrego mi vida, mis planes y mis sueños. Ayúdame a confiar en Ti completamente. Amén.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="devotional-archive">
+                        <h3><i class="fas fa-archive"></i> Archivo de Devocionales</h3>
+                        <div class="archive-list">
+                            <div class="archive-item">
+                                <h4>Lunes, 11 Marzo</h4>
+                                <p>"La Paz de Dios" - Filipenses 4:7</p>
+                                <a href="#" class="read-link">Leer <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="archive-item">
+                                <h4>Domingo, 10 Marzo</h4>
+                                <p>"Gozo en la Tribulación" - Romanos 5:3</p>
+                                <a href="#" class="read-link">Leer <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="archive-item">
+                                <h4>Sábado, 9 Marzo</h4>
+                                <p>"Fe que Actúa" - Santiago 2:17</p>
+                                <a href="#" class="read-link">Leer <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center" style="margin-top: 2rem;">
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-history"></i> Ver Más Devocionales
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="page-header">
+                    <h2><i class="fas fa-video"></i> Videos y Enseñanzas</h2>
+                    <div class="divider"></div>
+                    <p class="page-description">Contenido visual para tu edificación</p>
+                </div>
+                
+                <div class="videos">
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <i class="fas fa-play-circle"></i>
+                                <img src="https://via.placeholder.com/300x170/667eea/ffffff" alt="Video thumbnail">
+                            </div>
+                            <div class="video-info">
+                                <h4>Estudio Bíblico: Romanos 8</h4>
+                                <p class="video-meta">Rev. Luis Mendoza | 45 min</p>
+                                <p>Un estudio profundo del capítulo 8 de Romanos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <i class="fas fa-play-circle"></i>
+                                <img src="https://via.placeholder.com/300x170/764ba2/ffffff" alt="Video thumbnail">
+                            </div>
+                            <div class="video-info">
+                                <h4>Conferencia de Mujeres 2024</h4>
+                                <p class="video-meta">Dra. Ana Torres | 60 min</p>
+                                <p>Grabación completa de la conferencia anual de mujeres.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <i class="fas fa-play-circle"></i>
+                                <img src="https://via.placeholder.com/300x170/20c997/ffffff" alt="Video thumbnail">
+                            </div>
+                            <div class="video-info">
+                                <h4>Taller de Matrimonios</h4>
+                                <p class="video-meta">Pastor de Familia | 90 min</p>
+                                <p>Taller práctico para fortalecer el matrimonio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center" style="margin-top: 3rem;">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fab fa-youtube"></i> Ver Canal de YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herramientas -->
+        <section class="section">
+            <div class="container">
+                <div class="page-header">
+                    <h2><i class="fas fa-tools"></i> Herramientas Prácticas</h2>
+                    <div class="divider"></div>
+                    <p class="page-description">Recursos útiles para tu vida cristiana</p>
+                </div>
+                
+                <div class="tools">
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-bible"></i>
+                        </div>
+                        <h3>Plan de Lectura Bíblica</h3>
+                        <p>Plan anual para leer toda la Biblia en un año.</p>
+                        <a href="#" class="tool-link">Descargar PDF <i class="fas fa-download"></i></a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <h3>Guía de Oración</h3>
+                        <p>Estructura para tu tiempo de oración personal.</p>
+                        <a href="#" class="tool-link">Descargar PDF <i class="fas fa-download"></i></a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-journal-whills"></i>
+                        </div>
+                        <h3>Diario Espiritual</h3>
+                        <p>Plantilla para llevar un diario de tu caminar con Dios.</p>
+                        <a href="#" class="tool-link">Descargar PDF <i class="fas fa-download"></i></a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>Recursos para Niños</h3>
+                        <p>Actividades y lecciones bíblicas para niños.</p>
+                        <a href="#" class="tool-link">Descargar PDF <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Suscripción -->
+        <section class="section section-cta">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-content">
+                        <h2><i class="fas fa-bell"></i> Mantente Conectado</h2>
+                        <p>Suscríbete para recibir los nuevos recursos, devocionales y noticias directamente en tu correo.</p>
+                        
+                        <form class="subscribe-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Tu correo electrónico" required>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Suscribirse
+                                </button>
+                            </div>
+                            <p class="form-note">Respetamos tu privacidad. Puedes darte de baja en cualquier momento.</p>
+                        </form>
+                    </div>
+                    <div class="cta-image">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-church"></i>
+                    <h3>Iglesia Nazarena La Molina</h3>
+                    <p>Transformando vidas a través del evangelio</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="nosotros.html"><i class="fas fa-chevron-right"></i> Nosotros</a></li>
+                        <li><a href="actividades.html"><i class="fas fa-chevron-right"></i> Actividades</a></li>
+                        <li><a href="dni.html"><i class="fas fa-chevron-right"></i> DNI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="recursos.html"><i class="fas fa-chevron-right"></i> Recursos</a></li>
+                        <li><a href="dar.html"><i class="fas fa-chevron-right"></i> Ofrendas</a></li>
+                        <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p class="copyright">© 2024 Iglesia Nazarena La Molina<br>Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/resources.js"></script>
+</body>
+</html>
