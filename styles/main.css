@@ -1,17 +1,17 @@
 /* Variables y configuración global */
 :root {
-    --primary-color: #4a6cf7;
-    --primary-dark: #3a56d4;
+    --primary-color: #2E8B57;
+    --primary-dark: #1E5E3A;
     --secondary-color: #6c757d;
-    --accent-color: #20c997;
+    --accent-color: #198754;
     --light-color: #f8f9fa;
-    --dark-color: #212529;
+    --dark-color: #121212;
     --gray-light: #e9ecef;
     --gray: #6c757d;
     --white: #ffffff;
-    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     --transition: all 0.3s ease;
-    --border-radius: 10px;
+    --border-radius: 12px;
     --spacing: 1rem;
 }
 
@@ -77,6 +77,12 @@ h1, h2, h3, h4 {
     align-items: center;
     text-decoration: none;
     color: var(--primary-color);
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura según necesites */
+    width: auto;
+    margin-right: 10px;
 }
 
 .logo i {
@@ -168,7 +174,7 @@ h1, h2, h3, h4 {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #667eea 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
     color: var(--white);
     padding: 6rem 0 5rem; /* Reducido el padding superior */
 }
@@ -186,23 +192,41 @@ h1, h2, h3, h4 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing);
+    width: 100%;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out forwards;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    opacity: 0.9;
+    opacity: 0;
     margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.6s forwards;
 }
 
 .hero-image {
@@ -211,12 +235,60 @@ h1, h2, h3, h4 {
 }
 
 .image-placeholder {
-    background: rgb(255, 18, 18);
+    background: rgba(255, 255, 255, 0.1);
     margin-top: 30px;
-    font-size: 5px;
+    backdrop-filter: blur(5px);
 }
 
+/* --- Estilos para Hero Centrado y Moderno --- */
+.hero-content.hero-centered {
+    grid-template-columns: 1fr; /* Fuerza una sola columna */
+    text-align: center;
+    justify-items: center;
+    width: 100%;
+}
 
+.hero-text.glass-effect {
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 3rem;
+    
+    
+    max-width: 900px;
+    margin: 0 auto; /* Centra el contenedor */
+    
+}
+
+.hero-content.hero-centered .hero-buttons {
+    justify-content: center; /* Centra los botones flex */
+}
+
+.welcome-small {
+    font-size: 0.5em;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.highlight-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre el texto y las líneas */
+}
+
+.highlight-text::before,
+.highlight-text::after {
+    content: '';
+    height: 4px;
+    width: 60px; /* Largo de la línea */
+    border-radius: 10px;
+    /* Degradado colorido: Verde a Amarillo/Dorado */
+    background: linear-gradient(90deg, #f1c40f, #2E8B57, #f1c40f);
+    background-size: 200% auto;
+    animation: shine 3s linear infinite; /* Animación opcional de brillo */
+}
 
 /* Botones */
 .btn {

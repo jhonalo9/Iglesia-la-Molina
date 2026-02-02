@@ -139,6 +139,34 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Funcionalidad para Tabs (Pestañas) - Agregado para la sección de ofrendas
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (tabBtns.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remover clase active de todos los botones
+                tabBtns.forEach(b => b.classList.remove('active'));
+                
+                // Remover clase active de todos los contenidos
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Agregar clase active al botón clickeado
+                btn.classList.add('active');
+                
+                // Obtener el id del tab a mostrar
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Mostrar el contenido correspondiente
+                const targetContent = document.getElementById(tabId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
 });
 
 // Función para mostrar notificaciones
