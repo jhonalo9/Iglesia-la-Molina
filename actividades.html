@@ -9,6 +9,81 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/components.css">
+    <style>
+        /* Estilos adicionales para los eventos especiales */
+        .special-events-category {
+            margin-bottom: 3rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .category-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .category-objective {
+            background: var(--light-color);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .special-events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .event-card {
+            background: var(--light-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .event-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .event-card-date {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .event-card-title {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .event-card-desc {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .special-events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -282,75 +357,282 @@
             </div>
         </section>
 
-        <!-- Eventos Especiales -->
         <section class="section">
             <div class="container">
                 <div class="page-header">
                     <h2><i class="fas fa-calendar-star"></i> Eventos Especiales</h2>
                     <div class="divider"></div>
-                    <p class="page-description">Actividades extraordinarias y celebraciones anuales</p>
+                    <p class="page-description">Cronograma anual de actividades por áreas</p>
                 </div>
                 
-                <div class="special-events">
-                    <div class="event-highlight">
-                        <div class="event-date">
-                            <span class="month">MAR</span>
-                            <span class="day">15</span>
+                <!-- PROCLAMACIÓN -->
+                <div class="special-events-category">
+                    <h3 class="category-title"><i class="fas fa-bullhorn"></i> PROCLAMACIÓN</h3>
+                    <p class="category-objective"><strong>Objetivo:</strong> Brindar un servicio integral para la seguridad de las personas tanto en el aspecto físico, emocional y espiritual.</p>
+                    
+                    <div class="special-events-grid">
+                        <div class="event-card">
+                            <div class="event-card-date">25 ene, 29 mar</div>
+                            <h4 class="event-card-title">Talleres de evangelismo</h4>
+                            <p class="event-card-desc">Estrategias de cómo evangelizar a tus amigos</p>
                         </div>
-                        <div class="event-info">
-                            <h3>Retiro de Mujeres 2024</h3>
-                            <p class="event-desc">Un día completo de renovación espiritual, talleres y comunión para todas las mujeres.</p>
-                            <div class="event-details">
-                                <p><i class="far fa-clock"></i> 9:00 AM - 5:00 PM</p>
-                                <p><i class="fas fa-map-marker-alt"></i> Centro de Retiros Monte de los Olivos</p>
-                                <p><i class="fas fa-user"></i> Conferencista: Dra. Ana Torres</p>
-                            </div>
-                            <a href="contacto.html" class="btn btn-small">
-                                <i class="fas fa-info-circle"></i> Más Información
-                            </a>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">3,4,5 abr</div>
+                            <h4 class="event-card-title">Semana Santa</h4>
+                            <p class="event-card-desc">Película, noche juvenil y resurrección</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">07 Mar (Manchay), 27 jun (Pucallpa), 08 Ago (Tambo Verde)</div>
+                            <h4 class="event-card-title">Máxima Misión</h4>
+                            <p class="event-card-desc">Servicio de salud, asesoría financiera, legal, familiar, show infantil</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">07 marzo</div>
+                            <h4 class="event-card-title">Conferencia para Mujeres</h4>
+                            <p class="event-card-desc">Descubre la identidad y el rol de la mujer</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">JNI: 16 May y 5 Set</div>
+                            <h4 class="event-card-title">La gran noche juvenil</h4>
+                            <p class="event-card-desc">Música, teatro, mensaje y restauración</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">7-Jun</div>
+                            <h4 class="event-card-title">Campaña evangelística</h4>
+                            <p class="event-card-desc">Música, premios, mensaje y conversión</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">28 ene, 4,11,18 feb</div>
+                            <h4 class="event-card-title">Talleres de Igledesarrollo</h4>
+                            <p class="event-card-desc">Talleres y proyectos de plantación de iglesias</p>
                         </div>
                     </div>
+                </div>
+                
+                <!-- ADORACIÓN -->
+                <div class="special-events-category">
+                    <h3 class="category-title"><i class="fas fa-pray"></i> ADORACIÓN</h3>
+                    <p class="category-objective"><strong>Objetivo:</strong> Ofrecer servicios de adoración significativos en diversos horarios de la semana, en un templo con un ambiente de comodidad.</p>
                     
-                    <div class="event-highlight">
-                        <div class="event-date">
-                            <span class="month">MAR</span>
-                            <span class="day">22</span>
+                    <div class="special-events-grid">
+                        <div class="event-card">
+                            <div class="event-card-date">Domingos 11 am</div>
+                            <h4 class="event-card-title">Servicio de adoración dominical</h4>
                         </div>
-                        <div class="event-info">
-                            <h3>Conferencia Juvenil "Enciende tu Fe"</h3>
-                            <p class="event-desc">Conferencia especial para jóvenes con invitados especiales, música y talleres.</p>
-                            <div class="event-details">
-                                <p><i class="far fa-clock"></i> 6:00 PM - 9:00 PM</p>
-                                <p><i class="fas fa-map-marker-alt"></i> Auditorio Principal</p>
-                                <p><i class="fas fa-user"></i> Invitado: Pastor Samuel Rivera</p>
-                            </div>
-                            <a href="contacto.html" class="btn btn-small">
-                                <i class="fas fa-info-circle"></i> Más Información
-                            </a>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Domingos 7pm (a partir de marzo)</div>
+                            <h4 class="event-card-title">Servicio de adoración vespertino</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Martes 7:30pm</div>
+                            <h4 class="event-card-title">Servicios de oración</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Sábados 8pm</div>
+                            <h4 class="event-card-title">Reunión de jóvenes</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Último domingo de cada mes</div>
+                            <h4 class="event-card-title">Cultos misioneros de adoración</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">25 ene, 29 Mar, 31 May, 30 Ago, 25 Oct</div>
+                            <h4 class="event-card-title">Ayunos y oración</h4>
+                            <p class="event-card-desc">Tiempos de oración y desafío espiritual</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">31 dic, 02 Ab, 05 jun</div>
+                            <h4 class="event-card-title">Noches de vigilia</h4>
+                            <p class="event-card-desc">Música, dinámicas, concursos, oración, mensaje y restauración</p>
                         </div>
                     </div>
+                </div>
+                
+                <!-- COMUNIÓN -->
+                <div class="special-events-category">
+                    <h3 class="category-title"><i class="fas fa-hand-holding-heart"></i> COMUNIÓN</h3>
+                    <p class="category-objective"><strong>Objetivo:</strong> Fomentar la comunión cristiana entre los creyentes, mediante los grupos pequeños de oración y estudio bíblico.</p>
                     
-                    <div class="event-highlight">
-                        <div class="event-date">
-                            <span class="month">MAR</span>
-                            <span class="day">29</span>
+                    <div class="special-events-grid">
+                        <div class="event-card">
+                            <div class="event-card-date">Febrero y agosto</div>
+                            <h4 class="event-card-title">Organizar Grupos Pequeños</h4>
                         </div>
-                        <div class="event-info">
-                            <h3>Ceremonia de Bautismos</h3>
-                            <p class="event-desc">Celebración especial de bautismos. Si deseas bautizarte, contacta con nuestros pastores.</p>
-                            <div class="event-details">
-                                <p><i class="far fa-clock"></i> 4:00 PM</p>
-                                <p><i class="fas fa-map-marker-alt"></i> Piscina Bautismal</p>
-                                <p><i class="fas fa-user"></i> Oficia: Rev. Luis Mendoza</p>
-                            </div>
-                            <a href="contacto.html" class="btn btn-small">
-                                <i class="fas fa-info-circle"></i> Inscripciones
-                            </a>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Abril y agosto</div>
+                            <h4 class="event-card-title">Bienvenida a nuevos creyentes</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">10-May</div>
+                            <h4 class="event-card-title">Día de la Madre</h4>
+                            <p class="event-card-desc">Celebración, regalos, Palabra de desafío y comunión</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">14 jun, 27 Set</div>
+                            <h4 class="event-card-title">Bautismos en agua</h4>
+                            <p class="event-card-desc">Testimonio público de una vida nueva en Cristo</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">21-Jun</div>
+                            <h4 class="event-card-title">Día del Padre</h4>
+                            <p class="event-card-desc">Celebración, regalos, Palabra de desafío y comunión</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">19 Julio, 25 Octubre</div>
+                            <h4 class="event-card-title">Recepción nuevos miembros</h4>
+                            <p class="event-card-desc">Bienvenida, certificación y gratitud</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">19-Jul</div>
+                            <h4 class="event-card-title">Fiestas Patrias y platos típicos</h4>
+                            <p class="event-card-desc">Celebramos con platos típicos de cada región del país</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">16 agosto</div>
+                            <h4 class="event-card-title">Festival de Niños en Acción</h4>
+                            <p class="event-card-desc">Música, juegos, concursos y regalos</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">25-27 Setiembre</div>
+                            <h4 class="event-card-title">Retiro Familias con Propósito</h4>
+                            <p class="event-card-desc">Talleres, alabanza, restauración y compañerismo</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">11-Oct</div>
+                            <h4 class="event-card-title">Día del Pastor</h4>
+                            <p class="event-card-desc">Gratitud a nuestro pastor por su liderazgo en nuestra iglesia</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Julio y Octubre</div>
+                            <h4 class="event-card-title">Concentración de Grupos Pequeños</h4>
+                            <p class="event-card-desc">Concursos, palabra de desafío, compañerismo</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">2 de noviembre</div>
+                            <h4 class="event-card-title">Aniversario de la iglesia</h4>
+                            <p class="event-card-desc">Gratitud, alabanza, desafío, tiempo de compartir</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ENSEÑANZA -->
+                <div class="special-events-category">
+                    <h3 class="category-title"><i class="fas fa-chalkboard-teacher"></i> ENSEÑANZA</h3>
+                    <p class="category-objective"><strong>Objetivo:</strong> Desarrollar una educación cristiana, con enseñanza eficaz de la Palabra de Dios, enfocada en las necesidades de las familias.</p>
+                    
+                    <div class="special-events-grid">
+                        <div class="event-card">
+                            <div class="event-card-date">Domingos 11am</div>
+                            <h4 class="event-card-title">Escuela Dominical</h4>
+                            <p class="event-card-desc">Niños y pre-adolescentes</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Febrero-octubre</div>
+                            <h4 class="event-card-title">Discipulado para nuevos creyentes - D1</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Mayo y setiembre</div>
+                            <h4 class="event-card-title">Discipulado para nuevos miembros - D2</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Febrero</div>
+                            <h4 class="event-card-title">Discipulado para crecimiento espiritual - D3</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Junio</div>
+                            <h4 class="event-card-title">Discipulado para el servicio cristiano - D4</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Octubre</div>
+                            <h4 class="event-card-title">Discipulado para las misiones - D5</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Miércoles 9:00pm</div>
+                            <h4 class="event-card-title">Estudio Bíblico Integral</h4>
+                            <p class="event-card-desc">Dirigido a jóvenes y adultos</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">3er. martes cada mes</div>
+                            <h4 class="event-card-title">Estudios misioneros</h4>
+                            <p class="event-card-desc">Conoce las misiones a nivel global de nuestra iglesia</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">Cada dos meses (3er domingo)</div>
+                            <h4 class="event-card-title">Estudio misioneros con niños</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">29 mar, 30 ago</div>
+                            <h4 class="event-card-title">Panel Forum</h4>
+                            <p class="event-card-desc">Sobre misiones</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SERVICIO -->
+                <div class="special-events-category">
+                    <h3 class="category-title"><i class="fas fa-hands-helping"></i> SERVICIO</h3>
+                    <p class="category-objective"><strong>Objetivo:</strong> Formar líderes que respondan a las necesidades de la iglesia y comunidad, con una visión bíblica y teológica.</p>
+                    
+                    <div class="special-events-grid">
+                        <div class="event-card">
+                            <div class="event-card-date">28 febrero y marzo</div>
+                            <h4 class="event-card-title">Organizar e implementar equipos de ministerios</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">18 de Enero, 8 de Febrero, 15 de Marzo</div>
+                            <h4 class="event-card-title">Capacitaciones de dirección de servicios en la iglesia</h4>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">25-Oct</div>
+                            <h4 class="event-card-title">Feria de Ministerios</h4>
+                            <p class="event-card-desc">Exposición de todos los ministerios de nuestra iglesia</p>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-date">1-May</div>
+                            <h4 class="event-card-title">Conferencia de Liderazgo</h4>
+                            <p class="event-card-desc">Dirigido a todo los líderes de la iglesia</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        
 
         <!-- Recordatorio -->
         <section class="section section-cta">
@@ -408,10 +690,10 @@
                 <div class="footer-social">
                     <h4>Síguenos</h4>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/share/1Mc9yZU6WK/"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/nazarenolamolina"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51996643049" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                     <p class="copyright">© 2026 Iglesia Nazarena La Molina<br>Todos los derechos reservados.</p>
                 </div>
