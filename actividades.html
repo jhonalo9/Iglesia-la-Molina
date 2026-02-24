@@ -82,6 +82,56 @@
             .category-title {
                 font-size: 1.5rem;
             }
+            
+            .page-nav ul {
+                justify-content: flex-start;
+            }
+        }
+        
+        /* Estilos para el submenú de navegación */
+        .page-nav-wrapper {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-light);
+            position: sticky;
+            top: 80px; /* Ajuste para quedar debajo del header fijo */
+            z-index: 900;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .page-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .page-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 1rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+        }
+        
+        .page-nav a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            transition: var(--transition);
+            white-space: nowrap;
+            display: inline-block;
+        }
+        
+        .page-nav a:hover {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+        
+        /* Ajuste para el scroll para que el título no quede oculto */
+        section[id] {
+            scroll-margin-top: 150px;
         }
     </style>
 </head>
@@ -91,8 +141,8 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo-nazareno.png" alt="Logo de la Iglesia Nazarena">
-                    <span>Iglesia Nazarena<br><small>La Molina</small></span>
+                    <img src="assets/logo-nazareno.png" alt="Logo de la Iglesia del Nazareno">
+                    <span>Iglesia del Nazareno<br><small>La Molina</small></span>
                 </a>
                 
                 <button class="menu-toggle" aria-label="Abrir menú">
@@ -102,7 +152,14 @@
                 <ul class="nav-menu">
                     <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
                     <li><a href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a></li>
-                    <li><a href="actividades.html" class="active"><i class="fas fa-calendar-alt"></i> Actividades</a></li>
+                    <li class="dropdown">
+                        <a href="actividades.html" class="active"><i class="fas fa-calendar-alt"></i> Actividades <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="actividades.html#semanal">Horario Semanal</a></li>
+                            <li><a href="actividades.html#ministerios">Ministerios</a></li>
+                            <li><a href="actividades.html#especiales">Eventos Especiales</a></li>
+                        </ul>
+                    </li>
                     <li><a href="dni.html"><i class="fas fa-graduation-cap"></i> Viaje</a></li>
                     <li><a href="recursos.html"><i class="fas fa-book-open"></i> Recursos</a></li>
                     <li><a href="dar.html" class="btn-nav"><i class="fas fa-hand-holding-heart"></i> Dar</a></li>
@@ -121,10 +178,21 @@
         </div>
     </section>
 
+    <!-- Submenú de Navegación -->
+    <div class="page-nav-wrapper">
+        <nav class="page-nav">
+            <ul>
+                <li><a href="#semanal"><i class="fas fa-calendar-week"></i> Horario Semanal</a></li>
+                <li><a href="#ministerios"><i class="fas fa-people-group"></i> Ministerios</a></li>
+                <li><a href="#especiales"><i class="fas fa-calendar-star"></i> Eventos Especiales</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- Main Content -->
     <main class="main-content" id="horarios">
         <!-- Calendario Semanal -->
-        <section class="section">
+        <section class="section" id="semanal">
             <div class="container">
                 <div class="page-header">
                     <h2><i class="fas fa-calendar-week"></i> Horario Semanal</h2>
@@ -221,7 +289,7 @@
         </section>
 
         <!-- Ministerios -->
-        <section class="section section-alt">
+        <section class="section section-alt" id="ministerios">
             <div class="container">
                 <div class="page-header">
                     <h2><i class="fas fa-people-group"></i> Nuestros Ministerios</h2>
@@ -357,7 +425,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="especiales">
             <div class="container">
                 <div class="page-header">
                     <h2><i class="fas fa-calendar-star"></i> Eventos Especiales</h2>

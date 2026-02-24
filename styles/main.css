@@ -149,6 +149,43 @@ h1, h2, h3, h4 {
     color: var(--primary-color);
 }
 
+.nav-menu .dropdown {
+    position: relative;
+}
+
+.nav-menu .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 220px;
+    z-index: 1001;
+    border-top: 3px solid var(--primary-color);
+}
+
+.nav-menu .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    display: block;
+}
+
+.dropdown-menu a::after {
+    display: none;
+}
+
 .btn-nav {
     background: var(--primary-color);
     color: var(--white) !important;
@@ -161,6 +198,16 @@ h1, h2, h3, h4 {
 
 .btn-nav:hover {
     background: var(--primary-dark);
+}
+
+.dropdown-icon {
+    font-size: 0.8em;
+    margin-left: 0.3rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
 }
 
 .menu-toggle {

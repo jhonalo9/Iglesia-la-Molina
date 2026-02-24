@@ -16,8 +16,8 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo-nazareno.png" alt="Logo de la Iglesia Nazarena">
-                    <span>Iglesia Nazarena<br><small>La Molina</small></span>
+                    <img src="assets/logo-nazareno.png" alt="Logo de la Iglesia del Nazareno">
+                    <span>Iglesia del Nazareno<br><small>La Molina</small></span>
                 </a>
                 
                 <button class="menu-toggle" aria-label="Abrir menú">
@@ -27,7 +27,14 @@
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active"><i class="fas fa-home"></i> Inicio</a></li>
                     <li><a href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a></li>
-                    <li><a href="actividades.html"><i class="fas fa-calendar-alt"></i> Actividades</a></li>
+                    <li class="dropdown">
+                        <a href="actividades.html"><i class="fas fa-calendar-alt"></i> Actividades <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="actividades.html#semanal">Horario Semanal</a></li>
+                            <li><a href="actividades.html#ministerios">Ministerios</a></li>
+                            <li><a href="actividades.html#especiales">Eventos Especiales</a></li>
+                        </ul>
+                    </li>
                     <li><a href="dni.html"><i class="fas fa-graduation-cap"></i> Viaje</a></li>
                     <li><a href="recursos.html"><i class="fas fa-book-open"></i> Recursos</a></li>
                     <li><a href="dar.html" class="btn-nav"><i class="fas fa-hand-holding-heart"></i> Dar</a></li>
